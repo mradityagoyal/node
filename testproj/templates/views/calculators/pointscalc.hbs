@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<article>
+				<p><a href="/blog">&larr; back to the blog</a></p>
+				<hr>
+				<header>
+					<h1>{{data.title}}</h1>
+					{{#if data.degrees}}
+					<h3>
+						Select your Educational Qualification.
+						<select class="" name="education">
+							{{#each data.degrees}}
+              <option value="{{this.value}}">{{this.name}}</option>
+							{{/each}}
+            </select>
+					</h3>
+					<h4>
+						Select all that apply: <br>
+						<input type="checkbox" name="education_loc" value="USA"> Degree was obtained in USA?<br>
+  					<input type="checkbox" name="education_major" value="STEM"> Degree in STEM Field?<br>
+						<input type="checkbox" name="education_inst" value="COVERED"> Degree Obtained from a Covered Institute?<br>
+					</h4>
+					{{/if}}
+					{{#if true}}
+					Total Education Points = {{education}}
+					{{/if}}
+				</header>
+			</article>
+		</div>
+	</div>
+</div>
